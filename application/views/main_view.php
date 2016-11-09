@@ -32,4 +32,4 @@
 
 </div>
 
-<script type="text/javascript" src="application/assets/js/index.js"></script>
+<script type="text/javascript" src="/application/assets/js/main.js"></script>

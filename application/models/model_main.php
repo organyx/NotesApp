@@ -1,5 +1,5 @@
 <?php
-class Model_Index extends Model
+class Model_Main extends Model
 {
     public function get_note_list()
     {

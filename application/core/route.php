@@ -6,7 +6,7 @@ class Route
 	static function start()
 	{
 		// Controller and Default action
-		$controller_name = 'Index';
+		$controller_name = 'Login';
 		$action_name = 'index';
 		
 		$routes = explode('/', $_SERVER['REQUEST_URI']);

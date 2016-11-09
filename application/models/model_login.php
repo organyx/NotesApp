@@ -8,7 +8,7 @@ class Model_Login extends Model
             {
                 $loginUsername=$_POST['username'];
                 $password = $_POST['password'];
-                $redirectLoginSuccess = "/";
+                $redirectLoginSuccess = "/main/";
                 $redirectLoginFailed = "/";
 
                 $userinfo = $this->get_user($loginUsername);

@@ -1,10 +1,10 @@
 <?php
 
-class Controller_Index extends Controller
+class Controller_Main extends Controller
 {
     function __construct()
     {
-        $this->model = new Model_Index();
+        $this->model = new Model_Main();
         $this->view = new View();
     }
 
@@ -20,7 +20,7 @@ class Controller_Index extends Controller
         else
         {
             $data = $this->model->get_note_list();
-            $this->view->generate('index_view.php', 'template_view.php', $data);
+            $this->view->generate('main_view.php', 'template_view.php', $data);
         }
     }
 

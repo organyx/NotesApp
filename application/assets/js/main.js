@@ -10,7 +10,7 @@ $(document).ready(function ()
         var formData = $('#addNoteForm').serialize();
         $.ajax(
         {
-            url: '/',
+            url: '/main/',
             type: 'post',
             data: formData,
             success: function (data)

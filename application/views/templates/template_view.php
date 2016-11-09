@@ -23,15 +23,15 @@
 			        	<ul class="nav nav-pills pull-right">
 			        		<?php if(!isset($_SESSION['Username'])) {?>
 					        <li>
-			        			<a href="/login">Login</a>
+			        			<a href="/login/">Login</a>
 			        		</li>
-			        		<li><a href="/register">Register</a></li> 
+			        		<li><a href="/register/">Register</a></li> 
 			        		<?php } else {?>
 			        		<li>
-				        		<a href="/"><?php echo escape($_SESSION['Username'])?></a>
+				        		<a href="/main/"><?php echo escape($_SESSION['Username'])?></a>
 				        	</li>
 			        		<li>
-			        			<a href="/logout/">Logout</a>
+			        			<a href="/main/logout/">Logout</a>
 			        		</li>
 			        		<?php }?>
 			        	</ul>
