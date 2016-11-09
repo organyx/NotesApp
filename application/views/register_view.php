@@ -4,7 +4,7 @@
                 <h2>Registration Form</h2>
                     <div class="form-group">
                         <div class="col-sm-9">
-                            <p id="returnmessage"></p>
+                            <p id="returnmessage" class="label-info"></p>
                         </div>
                     </div>
                 <div class="form-group">

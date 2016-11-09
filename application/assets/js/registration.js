@@ -8,6 +8,8 @@ $(document).ready(function ()
             type: 'POST',
             url: '/register/',
             data: formData,
+            processData: false,
+            contentType: false,
             success: function (data)
             {
                 $('#returnmessage').html(data);

@@ -24,10 +24,5 @@ class Controller_Index extends Controller
         }
     }
 
-    function action_logout()
-    {
-        session_start();
-        session_destroy();
-        header('Location:/');
-    }
+
 }

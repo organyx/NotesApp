@@ -18,34 +18,22 @@
 	<body>
 		<div class="container">
 		  <div class="header clearfix">
-		    	<nav>
-		        	<ul class="nav nav-pills pull-right">
-		                <li role="presentation"><a href="/register">Register</a></li> 
-		            </ul>
-		        </nav>
 		        <div id="panel">
-
-			        <?php if(isset($_SESSION['Username'])) { ?>
 			        <div>
 			        	<ul class="nav nav-pills pull-right">
-				        	<li>
-				        		<a href="/"><?php echo escape($_SESSION['Username']) ?></a>
-				        	</li>
-			        	</ul>
-			        </div>
-			        <?php } ?>
-
-			        <div>
-			        	<ul class="nav nav-pills pull-right">
-			        		<?php if(!isset($_SESSION['Username'])) { ?>
+			        		<?php if(!isset($_SESSION['Username'])) {?>
 					        <li>
 			        			<a href="/login">Login</a>
 			        		</li>
-			        		<?php } else { ?>
+			        		<li role="presentation"><a href="/register">Register</a></li> 
+			        		<?php } else {?>
+			        		<li>
+				        		<a href="/"><?php echo escape($_SESSION['Username'])?></a>
+				        	</li>
 			        		<li>
 			        			<a href="/logout/">Logout</a>
 			        		</li>
-			        		<?php } ?>
+			        		<?php }?>
 			        	</ul>
 			        </div>
 		        </div>

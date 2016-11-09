@@ -14,4 +14,11 @@ class Controller {
 	{
 		// todo	
 	}
+
+	function action_logout()
+    {
+        session_start();
+        session_destroy();
+        header('Location:/index.php');
+    }
 }
