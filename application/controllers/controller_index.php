@@ -14,7 +14,8 @@ class Controller_Index extends Controller
         if(IS_AJAX)
         {
             $this->model->add_note();
-            // $data = $this->model->get_note_list();
+            $data = $this->model->get_note_list();
+            // $this->view->generate('index_view.php', 'template_view.php', $data);
         }
         else
         {

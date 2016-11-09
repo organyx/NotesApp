@@ -10,7 +10,7 @@ $(document).ready(function ()
         var formData = $('#loginForm').serialize();
         $.ajax(
         {
-            url: '/login/index/',
+            url: '/login/',
             type: 'post',
             data: formData,
             success: function (data)

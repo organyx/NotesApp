@@ -6,9 +6,8 @@ $(document).ready(function ()
         $.ajax(
         {
             type: 'POST',
-            url: '/register/index/',
+            url: '/register/',
             data: formData,
-            async: false,
             success: function (data)
             {
                 $('#returnmessage').html(data);
@@ -16,10 +15,7 @@ $(document).ready(function ()
             error: function (xhr, str)
             {
                 alert('Error: ' + xhr.responseCode);
-            },
-            cache: false,
-            contentType: false,
-            processData: false
+            }
         });
 
         return false;

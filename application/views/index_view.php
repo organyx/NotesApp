@@ -22,7 +22,9 @@
     </div> <!-- ./container -->    
 
     <div class="list-group">
-        <?php  foreach($data as $note) { ?>
+        <?php  
+            $data = json_decode($data, true);
+            foreach($data as $note) { ?>
             <a href="#" class="list-group-item">
             <?php echo $note['note_text'];?>
             </a>

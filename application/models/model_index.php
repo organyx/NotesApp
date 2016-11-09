@@ -22,7 +22,8 @@ class Model_Index extends Model
                         $notes[] = $row;
                     }
                     $result->free();
-                    return $notes;
+                    echo json_encode($notes);
+                    return json_encode($notes);
                 }
             }
     }
@@ -60,7 +61,7 @@ class Model_Index extends Model
                 }
                 else
                 {
-                    echo "Note Added Succesfully"; 
+                    // echo "Note Added Succesfully"; 
                     return "Note Added Succesfully";   
                 }
         }
