@@ -13,7 +13,8 @@ class Controller_Index extends Controller
         session_start();
         if(IS_AJAX)
         {
-            $data = $this->model->get_note_list();
+            $this->model->add_note();
+            // $data = $this->model->get_note_list();
         }
         else
         {

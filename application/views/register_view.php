@@ -1,14 +1,3 @@
-<div id="PageHeading">
-      <!-- <h1>Registration</h1> -->
-</div>
-    <?php if(isset($_SESSION['Username'])) { ?>
-    
-<div id="content_top">
-    <h2><a href="/account/">Account</a></h2>
-</div>
-     <?php }; ?>
-
-     
 <div id="content_bottom">
         <div class="container">
             <form class="form-horizontal" role="form" method="POST" id="regForm" action="javascript:void(null);">

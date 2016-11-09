@@ -1,30 +1,25 @@
-<div class="header">
-      <h1>Main</h1>
-</div>
-    <?php 
-    if(isset($_SESSION['Username'])) { ?>
-    
-<div id="content_top">
-    <!-- <h2><a href="/">Account</a></h2>-->
-</div>
-     <?php }; ?>
-
-     
 <div id="content_bottom">
     <?php
-
-        // function get_note_list()
-        // {
-            
-        // }
-
         // echo 'User_id '.$_SESSION['User_id'];
         // $usr = get_note_list();
         // echo $usr;
         // $arrlngt = count($usr);
         // echo ' Array Length '.$arrlngt;
-
     ?>
+
+    <div class="container">
+        <form class="form-horizontal" role="form" method="POST" id="addNoteForm" action="javascript:void(null);">
+            <h2>Add new Note</h2>
+            <div class="form-group">
+                <div class="col-sm-9">
+                    <input type="text" name="note" id="note" placeholder="Note ... " class="form-control" autofocus>
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" id="addNoteBtn" class="btn btn-primary btn-block">Add</button>
+                </div>
+            </div>
+        </form> <!-- /form -->
+    </div> <!-- ./container -->    
 
     <div class="list-group">
         <?php  foreach($data as $note) { ?>
@@ -34,7 +29,13 @@
         <?php  } ?>
     </div>
 
+    <div class="form-group">
+        <div class="col-sm-9">
+            <p id="returnmessage"></p>
+        </div>
+    </div>
+
 
 </div>
 
-<!-- <script type="text/javascript" src="../../assets/js/index.js"></script> -->
+<script type="text/javascript" src="application/assets/js/index.js"></script>

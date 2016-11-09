@@ -1,7 +1,4 @@
-<div id="PageHeading">
-      <h1></h1>
-</div>     
-<div id="content_bottom">
+ <div id="content_bottom">
     <div class="center" id="login">
         <div class="container">
             <form class="form-horizontal" role="form" method="POST" id="loginForm" action="javascript:void(null);">

@@ -44,4 +44,26 @@ class Model_Index extends Model
         }
     }
 
+    public function add_note()
+    {
+        Global $NotesApp;
+
+        if(isset($_SESSION['User_id']))
+        {
+            $sql=sprintf("INSERT INTO notes (note_text, created_by) VALUES (%s, %s)",
+                       GetSQLValueString($_POST['note'], "text"),
+                       GetSQLValueString($_SESSION['User_id'], "text"));
+ 
+                $result=$NotesApp->query($sql);
+                if ($result === false) {
+                    trigger_error('Wrong SQL: ' . $sql . ' Error: ' . $NotesApp->error, E_USER_ERROR);
+                }
+                else
+                {
+                    echo "Note Added Succesfully"; 
+                    return "Note Added Succesfully";   
+                }
+        }
+    }
+
 }

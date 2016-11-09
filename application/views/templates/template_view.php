@@ -20,9 +20,7 @@
 		  <div class="header clearfix">
 		    	<nav>
 		        	<ul class="nav nav-pills pull-right">
-		            	<li role="presentation" class="active"><a href="/">Main</a></li>
-		                <li role="presentation"><a href="/register">Register</a></li>
-		                <li role="presentation"><a href="/forgot_pass">Forgot Password</a></li>    
+		                <li role="presentation"><a href="/register">Register</a></li> 
 		            </ul>
 		        </nav>
 		        <div id="panel">
