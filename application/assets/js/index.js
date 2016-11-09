@@ -1,8 +1,5 @@
 $(document).ready(function ()
 {
-
-    // window.onload = addNote();
-
     $('#addNoteBtn').click(function ()
     {
         addNote();

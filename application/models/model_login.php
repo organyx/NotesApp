@@ -42,12 +42,6 @@ class Model_Login extends Model
                 }
                 
             }
-            // else
-            // {
-            //     $data["login_status"] = "";
-            // }
-        // echo "Login Failed."; 
-        // return $data["login_status"];
     }
 
     public function get_user($username)

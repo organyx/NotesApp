@@ -2,16 +2,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 
 		<title>NotesApp</title>
 
-		<link rel="stylesheet" type="text/css" href="/application/assets/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/application/assets/css/jumbotron-narrow.css">
+		<link rel="stylesheet" type="text/css" href="/application/assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/application/assets/css/jumbotron-narrow.css" />
 
 		<script src="/application/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 	</head>
@@ -25,7 +25,7 @@
 					        <li>
 			        			<a href="/login">Login</a>
 			        		</li>
-			        		<li role="presentation"><a href="/register">Register</a></li> 
+			        		<li><a href="/register">Register</a></li> 
 			        		<?php } else {?>
 			        		<li>
 				        		<a href="/"><?php echo escape($_SESSION['Username'])?></a>

@@ -1,12 +1,4 @@
 <div id="content_bottom">
-    <?php
-        // echo 'User_id '.$_SESSION['User_id'];
-        // $usr = get_note_list();
-        // echo $usr;
-        // $arrlngt = count($usr);
-        // echo ' Array Length '.$arrlngt;
-    ?>
-
     <div class="container">
         <form class="form-horizontal" role="form" method="POST" id="addNoteForm" action="javascript:void(null);">
             <h2>Add new Note</h2>
