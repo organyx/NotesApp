@@ -31,11 +31,13 @@ class Model_Login extends Model
                     } else {
                         session_regenerate_id();
                     }
+                    $_SESSION['User_id'] = $userinfo['_id'];
                     $_SESSION['Username'] = $loginUsername;
                     // echo "Login successful";
                     flush();
                     header('Location:'.$redirectLoginSuccess);
                     exit();
+                    // $this->redirect($redirectLoginSuccess);
                 }
                 
             }
@@ -51,7 +53,7 @@ class Model_Login extends Model
     {
         Global $NotesApp;
 
-        $query=sprintf("SELECT username, password, email FROM users WHERE username=%s", GetSQLValueString($username, "text")); 
+        $query=sprintf("SELECT * FROM users WHERE username=%s", GetSQLValueString($username, "text")); 
         $result = $NotesApp->query($query);
         if($result === false)
         {
