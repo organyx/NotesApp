@@ -51,7 +51,9 @@ class Model_Index extends Model
 
         if(isset($_SESSION['User_id']))
         {
-            $sql=sprintf("INSERT INTO notes (note_text, created_by) VALUES (%s, %s)",
+            if(isset($_POST['note']))
+            {
+                $sql=sprintf("INSERT INTO notes (note_text, created_by) VALUES (%s, %s)",
                        GetSQLValueString($_POST['note'], "text"),
                        GetSQLValueString($_SESSION['User_id'], "text"));
  
@@ -64,6 +66,7 @@ class Model_Index extends Model
                     // echo "Note Added Succesfully"; 
                     return "Note Added Succesfully";   
                 }
+            }
         }
     }
 

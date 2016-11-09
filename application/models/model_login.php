@@ -26,6 +26,7 @@ class Model_Login extends Model
 
                 if($loginFoundUser) 
                 { 
+                    // session_start();
                     if (PHP_VERSION >= 5.1) {
                         session_regenerate_id(true);
                     } else {
