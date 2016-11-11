@@ -1,20 +1,20 @@
 <?php
 
-    $GLOBALS['secure_password'] = "";
-
 class Model_Register extends Model
 {
     public function register()
     {   
         Global $NotesApp;
 
-        $GLOBALS['secure_password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        $pass_hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
+        if($this->check_user_input())
+        {
             if(!$this->user_exists())
             {
                 $sql=sprintf("INSERT INTO users (username, password, email) VALUES (%s, %s, %s)",
                        GetSQLValueString($_POST['username'], "text"),
-                       GetSQLValueString($GLOBALS['secure_password'], "text"),
+                       GetSQLValueString($pass_hash, "text"),
                        GetSQLValueString($_POST['email'], "text"));
  
                 $result=$NotesApp->query($sql);
@@ -32,6 +32,7 @@ class Model_Register extends Model
                 echo "Username is already taken."; 
                 return "Username is already taken."; 
             }
+        }
     }
 
     public function user_exists()
@@ -64,6 +65,62 @@ class Model_Register extends Model
                 return false;
             }
         }
+    }
+
+    public function min_max_pass($password)
+    {
+        $min = 8;
+        $max = 32;
+         if (strlen($password) > $max)
+         {
+           return 1;
+         } 
+         elseif (strlen($password) < $min)
+         {
+           return -1;
+         }
+         else
+         {
+           return 0;
+         }
+    }
+
+    public function check_user_input()
+    {
+        Global $WebCatalogue;
+
+        if(empty($_POST['username']))
+        {
+            echo "Please enter your Username.";
+            return false;
+        }
+
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && !empty($_POST['email'])) {    
+        }
+        else {
+            echo "Please enter a valid email.";
+            return false;
+        }
+
+        if(empty($_POST['password'])) 
+        {
+            echo "Password field cannot be empty.";
+            return false;
+        }
+
+        switch ($this->min_max_pass($_POST['password'])) 
+        {
+                case '-1':
+                    echo "Password is too short.";
+                    return false;
+                    break;
+                case '1':
+                    echo "Password is too long.";
+                    return false;
+                    break;
+        }
+
+        return true;
     }
 
 }

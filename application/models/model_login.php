@@ -16,7 +16,6 @@ class Model_Login extends Model
                 if(password_verify($password, $userinfo['password']))
                 {
                     $loginFoundUser = true;
-                    // echo "User exists";
                 }
                 else
                 {
