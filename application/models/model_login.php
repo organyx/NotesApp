@@ -34,11 +34,11 @@ class Model_Login extends Model
                     }
                     $_SESSION['User_id'] = $userinfo['_id'];
                     $_SESSION['Username'] = $loginUsername;
-                    // echo "Login successful";
-                    flush();
-                    header('Location:'.$redirectLoginSuccess);
-                    exit();
-                    // $this->redirect($redirectLoginSuccess);
+                    echo "Login successful";
+                    // flush();
+                    // header('Location:'.$redirectLoginSuccess);
+                    // exit();
+                    $this->redirect($redirectLoginSuccess);
                 }
                 
             }

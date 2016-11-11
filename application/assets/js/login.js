@@ -15,7 +15,13 @@ $(document).ready(function ()
             data: formData,
             success: function (data)
             {
-                $('#returnmessage').html(data);
+                substring = "Username / Password is incorrect";
+                console.log(data.indexOf(substring) !== -1);
+                // console.log(typeof(data));
+                if(data.indexOf(substring) === -1)
+                   window.location.replace("/main/");
+                else
+                    $('#returnmessage').html(data);
             },
             error: function (xhr, str)
             {
